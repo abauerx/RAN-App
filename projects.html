@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href= "css/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="vendor/jquery/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="app/config.js"></script>
+    <script type="text/javascript" src="vendor/jquery.mobile/jquery.mobile-1.1.1.js"></script>
+    <script type="text/javascript" src="app/tabbedimages.js"></script>
+    <script type="text/javascript" src="app/optionsWidget.js"></script>
+    <script src="corodova.js"></script>
+    <script src="intelxdk.js"></script>
+    <script src="xhr.js"></script>
+    
+    <script type="text/javascript">
+        var onDeviceReady=function(){
+            if( window.Cordova && navigator.splashscreen ) {     // Cordova API detected
+                navigator.splashscreen.hide() ;                 // hide splash screen
+            }
+        };
+        document.addEventListener("deviceready", onDeviceReady, false) ;
+    </script>    
+   
+    <style>
+        
+.ui-page {
+    background: #e9e9e9;
+color: black;
+font-weight: 500;
+}
+p {
+    font-size: 85%;
+}
+.ui-header .ui-title{
+  text-overflow: visible !important;
+  white-space: normal !important;
+margin-left: 10%;
+            margin-right: 10%;
+}
+
+        .ui-header {
+            background: #5e87b0;
+             text-align: center;
+                }
+
+
+
+</style>
+
+</style>
+</head> 
+<body>
+
+<div data-role="page" id="projects">
+
+    <div data-role="header" data-theme="b" data-position="fixed">
+
+    <h1>RAN Network</h1>
+  </div>        
+        
+                        
+                        
+                        
+     <ul data-role="listview" data-inset="true">
+				<li data-role="list-divider">Project Reference Library</li>
+				<li><a href="#"> <img src="./images/th.jpg"> <h1>DROPS</h1><p>Dropped Objects Prevention Scheme</p></a></li>
+				<li><a href="#"> <img src="./images/cn.jpg"> <h1><img src="./flags/cn.gif"> Country Name : China </h1><p>The Capital City of The Country China is Beijing.</p></a></li>
+				<li><a href="#"> <img src="./images/my.jpg"> <h1><img src="./flags/my.gif"> Country Name : Malaysia </h1><p>The Capital City of The Country Malaysia is Kuala Lumpur.</p></a></li>
+				<li><a href="#"> <img src="./images/in.jpg"> <h1><img src="./flags/in.gif"> Country Name : India </h1><p>The Capital City of The Country India is New Delhi.</p></a></li>
+				<li><a href="#"> <img src="./images/id.jpg"> <h1><img src="./flags/id.gif"> Country Name : Indonesia </h1><p>The Capital City of The Country Indonesia is Jakarta.</p></a></li>
+			     </ul>
+      
+      
+   
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>jQuery Mobile: Popup Use Cases</h1>
+	</div>
+	<div data-role="content">
+
+		<ul data-role="listview" data-inset="true">
+			<li>
+				<a href="#basic" data-rel="popup">Basic popup</a>
+			</li>
+			<li>
+				<a href="#tooltip" data-rel="popup">Tooltip</a>
+			</li>
+			<li>
+				<a href="#lightbox" data-rel="popup" data-position-to="window" data-transition="fade">Lightbox</a>
+			</li>
+			<li>
+				<a href="#form" data-rel="popup" data-transition="fade">Simple Form</a>
+			</li>
+			<li>
+				<a href="#listview" data-rel="popup" data-transition="slideup">Listview Menu</a>
+			</li>
+		</ul>
+
+		<!-- Sample popups, popup div and link must be within same data-role=page container -->
+
+		<!-- basic popup -->
+		<div data-role="popup" id="basic" class="ui-content">
+			<p>My popup content.</p>
+    </div>
+
+		<!-- tooltip popup -->
+		<div data-role="popup" id="tooltip" class="ui-content" data-theme="b">
+			<h4>Tooltip content</h4>
+			<p>This shows how the popup can be used as a nice tooltip as well, with
+				multi-line content.</p>
+		</div>
+
+		<!-- lightbox popup -->
+		<div data-role="popup" id="lightbox" data-overlay-theme="a">
+			<a href="#" data-role="button" data-icon="delete" data-iconpos="notext" data-rel="back" data-theme="a" class="ui-btn-right">Close</a>
+    <img src="images/ranlogo.png" alt="RAN" />
+		</div>
+
+		<!-- simple form -->
+		<div data-role="popup" id="form" class="ui-content" data-theme="a" data-overlay-theme="a">
+			<form name="sampleform" action="" method="post">
+				<label for="uname" class="ui-hidden-accessible">Username</label>
+				<input type="text" name="uname" id="uname" placeholder="username">
+				<label for="pword" class="ui-hidden-accessible">Password</label>
+				<input type="password" name="pword" id="pword" placeholder="password">
+				<input type="submit" name="loginSubmit" id="loginSubmit" value="login" data-theme="b" data-icon="arrow-r" data-iconpos="right">
+			</form>
+		</div>
+
+		<!-- listview -->
+		<div data-role="popup" id="listview" data-theme="a" data-tolerance="0,0">
+			<h2>DROPS Survey</h2>
+			<ul data-role="listview" data-theme="b">
+				<li>
+					<a href="#"> <h3>Reference</h3><p>Documentation on Guidelines and Procedures</p></a> </li>
+	
+				<li>
+					<a href="#"> <h3>Reports</h3><p>Templates and sample documentation for report generation</p></a></li>
+				<li>
+					<a href="#">Account</a>
+				</li>
+			</ul>
+		</div>
+      
+	</div>
+     
+<div data-role="footer" data-theme="b" data-position="fixed">
+  
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home" data-transition="none" >Home</a></li>
+        <li><a href="#" class="ui-btn-active ui-state-persist"   data-icon="gear">Projects</a></li>
+        <li><a href="#tools" data-icon="arrow-r" data-transition="none">Tools</a></li>
+        <li><a href="#calculator" data-icon="search" data-transition="none">Page 4</a></li>
+      </ul>
+    </div>   
+  </div>
+</div>
+</body>
+</html>
